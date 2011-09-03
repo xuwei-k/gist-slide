@@ -1,0 +1,7 @@
+/target
+/project/target
+/project/plugins/target
+*.swp
+*.class
+*.jar
+
