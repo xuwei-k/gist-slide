@@ -1,4 +1,4 @@
-# Slide Show on GAE
+# Slideshow on GAE
 
 ## http://gist-slide.appspot.com/
 
