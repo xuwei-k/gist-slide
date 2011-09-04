@@ -10,7 +10,8 @@ object GistSlide extends Build{
         libraryDependencies ++= Seq(
           "javax.servlet" % "servlet-api" % "2.5"
          ,"net.databinder" %% "pamflet-knockoff" % "0.2.2"
-        )
+        ),
+        addCompilerPlugin("org.scala-tools.sxr" %% "sxr" % "0.2.7")
       )
     }
   )
