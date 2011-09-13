@@ -2,5 +2,6 @@
 
 ## http://gist-slide.appspot.com/
 
-## http://gist-slide.appspot.com/1191887/gist-slide
+## Description in Japanese http://gist-slide.appspot.com/1191887/gist-slide
 
+## Sxr http://xuwei-k.github.com/gist-slide/
