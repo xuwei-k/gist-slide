@@ -1,4 +1,5 @@
-# Slideshow on GAE
+# Slideshow on GAE [![Build Status](https://secure.travis-ci.org/xuwei-k/gist-slide.png)](http://travis-ci.org/xuwei-k/gist-slide)
+
 
 ## http://gist-slide.appspot.com/
 
