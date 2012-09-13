@@ -18,3 +18,4 @@ scalacOptions <+= scalaSource in Compile map { "-P:sxr:base-directory:" + _.getA
 
 scalacOptions ++= Seq("-deprecation","-unchecked")
 
+licenses := Seq("MIT" -> url("https://github.com/xuwei-k/gist-slide/blob/master/LICENSE"))
