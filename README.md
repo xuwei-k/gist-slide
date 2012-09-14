@@ -5,4 +5,7 @@
 
 ## Description in Japanese http://gist-slide.appspot.com/1191887/gist-slide
 
-## Sxr http://xuwei-k.github.com/gist-slide/
+
+* Sxr http://xuwei-k.github.com/gist-slide/
+
+* This code is based on work by @softprops's [picture-show](https://github.com/softprops/picture-show)
