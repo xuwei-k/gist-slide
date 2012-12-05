@@ -1,5 +1,5 @@
 #!/bin/sh
-SDK=appengine-java-sdk-1.7.2
+SDK=appengine-java-sdk-1.7.3
 SDK_ZIP=$SDK.zip
 wget http://googleappengine.googlecode.com/files/$SDK_ZIP &&
 unzip $SDK_ZIP &&
