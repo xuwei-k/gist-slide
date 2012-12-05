@@ -10,17 +10,20 @@ class Main extends HttpServlet{
 
     def write(s:Any) = resp.getWriter().println(s)
 
-    allCatch.either{ 
-      
+    allCatch.either{
+
       val markdown = "https://gist.github.com/raw" + req.getRequestURI
 
-      val htmlBody = Markup.parse(io.Source.fromURL(markdown,"UTF-8").mkString) 
+      val htmlBody = Markup.parse(io.Source.fromURL(markdown,"UTF-8").mkString)
 
       write(
         Templates.default("" , htmlBody._1 )
       )
 
-    }.left.foreach{ e => write(e) } 
+    }.left.foreach{ e =>
+      resp.setContentType("text/plain; charset=UTF-8")
+      write(e.toString + "\n\n" + e.getStackTrace.mkString("\n") )
+    }
   }
 
 }
