@@ -7,4 +7,4 @@ unset APPENGINE_SDK_HOME &&
 export APPENGINE_SDK_HOME=./$SDK &&
 wget https://raw.github.com/paulp/sbt-extras/master/sbt &&
 chmod u+x ./sbt &&
-./sbt -debug -mem 256 test
+./sbt -debug test
