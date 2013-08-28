@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.scala-tools.sxr" % "sxr_2.9.0" % "0.2.7")
 
-seq(sbtappengine.Plugin.webSettings: _* )
+sbtappengine.Plugin.webSettings
 
 scalacOptions <+= scalaSource in Compile map { "-P:sxr:base-directory:" + _.getAbsolutePath }
 
