@@ -10,8 +10,6 @@ libraryDependencies ++= Seq(
   ,"org.eclipse.jetty" % "jetty-webapp" % "7.4.5.v20110725" % "container"
 )
 
-addCompilerPlugin("org.scala-tools.sxr" % "sxr_2.9.0" % "0.2.7")
-
 sbtappengine.Plugin.webSettings
 
 scalacOptions <+= scalaSource in Compile map { "-P:sxr:base-directory:" + _.getAbsolutePath }
