@@ -1,4 +1,4 @@
-package com.xuwei_k
+package gist_slide
 
 object Markup {
   import pamflet.PamfletDiscounter._

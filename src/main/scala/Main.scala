@@ -1,4 +1,5 @@
-package com.xuwei_k
+package gist_slide
+
 import javax.servlet.http._
 import scala.util.control.Exception.allCatch
 
