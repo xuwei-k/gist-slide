@@ -2,13 +2,24 @@ package com.xuwei_k
 import javax.servlet.http._
 import scala.util.control.Exception.allCatch
 
+object Main {
+  private def intParam(req: HttpServletRequest, key: String): Option[Int] =
+    Option(req.getParameter(key)).flatMap{ v =>
+      try{
+        Some(v.toInt)
+      }catch{
+        case _: NumberFormatException => None
+      }
+    }
+}
+
 class Main extends HttpServlet{
 
-  override def doGet(req:HttpServletRequest ,resp: HttpServletResponse ){
+  override def doGet(req: HttpServletRequest, resp: HttpServletResponse){
 
     resp.setContentType("text/html; charset=UTF-8")
 
-    def write(s:Any) = resp.getWriter().println(s)
+    def write(s: Any) = resp.getWriter().println(s)
 
     allCatch.either{
 
@@ -16,8 +27,10 @@ class Main extends HttpServlet{
 
       val htmlBody = Markup.parse(io.Source.fromURL(markdown,"UTF-8").mkString)
 
+      val prettifyVersion = Main.intParam(req, "prettify_version")
+
       write(
-        Templates.default("" , htmlBody._1 )
+        Templates.default("", prettifyVersion, htmlBody._1)
       )
 
     }.left.foreach{ e =>
